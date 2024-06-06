@@ -1,0 +1,669 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+
+  /* width */
+
+}
+a {
+  color: unset;
+  &:hover {
+    color: unset;
+  }
+}
+@import "terms";
+@import "arrowDown";
+@import "closeGame";
+.main_contain {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loading-image,
+  .home-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100dvh;
+    width: 100%;
+    
+  }
+  .loading-image {
+    background-image: url("../../assets/images/loading-image.png");
+  }
+
+  .home-bg {
+    background-image: url("../../assets/images/mobile-instructions-bg.png");
+  }
+
+  .home-bg.congrats-bg {
+    background-image: url("../../assets/images/Congrats-bg.png");
+  }
+
+  .container-section {
+    max-width: 1665px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 45px 20px;
+  }
+
+  .page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(100vh - 90px);
+    gap: 20px;
+  }
+
+  .share-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .home-btn {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+
+  .home-btn img,
+  .home-btn a {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    display: inline-block;
+  }
+
+  .success-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 500px;
+  }
+  .success-image-2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    // width: 100px;
+  }
+  .success-image-3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    // width: 100px;
+  }
+  .success-image img {
+    width: 100%;
+  }
+  .success-image-2 img {
+    width: 100%;
+  }
+  .success-image-3 img {
+    width: 100%;
+  }
+
+  .success-owner {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile-wrapper,
+  .success-text {
+    width: 50%;
+  }
+
+  .profile-wrapper {
+    
+    
+    position: relative;
+  }
+
+  .profile-picture {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #c4c4c4;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .success-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .success-owner img {
+    width: 100%;
+  }
+
+  .instruction-wrapper .instruction-text {
+    text-align: end;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 700;
+
+    a {
+      color: #C90000;
+      cursor: pointer;
+    }
+  }
+
+  .instruction-wrapper h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 35px;
+  }
+
+  .instruction-wrapper .terms_conditions li{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .instruction-wrapper .instruction-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+  }
+
+ .instruction-btn {
+    max-width: 400px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+ .instruction-btn img {
+    width: 100%;
+  }
+
+  .instruction-wrapper .instruction-image,
+  .instruction-wrapper .terms_conditions {
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .instruction-wrapper .terms_conditions {
+    max-height: calc(100vh - 300px);
+    overflow: auto;
+    margin-bottom: 34px;
+    padding-right: 20px;
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #262626; 
+         border-radius: 5px;
+         border: 1px solid #ffffff;
+      }
+      
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #FFFFFF; 
+        border-radius: 5px;
+      }
+
+      // /* Handle on hover */
+      // &::-webkit-scrollbar-thumb:hover {
+      //   background: #555; 
+      // }
+  }
+
+  .speed-can img {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    max-width: 600px;
+  }
+  .enverment_bg {
+    img {
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .bg_lg {
+      display: block;
+    }
+    .bg_sm {
+      display: none;
+    }
+  }
+  .overlay_content,
+  .terms_conditions_wrapper {
+    padding-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .bottom_line img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cow_img {
+      width: 900px;
+      img {
+        width: 100%;
+      }
+    }
+    .game_rules {
+      margin-top: 5rem;
+      width: 720px;
+      li {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 1rem;
+
+        a {
+          color: #ed2025;
+          cursor: pointer;
+        }
+        &:last-child {
+          margin-top: 2rem;
+          text-align: center;
+        }
+      }
+      .device_position {
+        text-align: center;
+        margin: 2rem 0;
+        img {
+          width: 250px;
+        }
+      }
+    }
+    .roll_screenshot {
+      margin: 1rem 0 4rem 0;
+      img {
+        width: 600px;
+      }
+    }
+    .my_btns_wrapper {
+      position: relative;
+      .my_btns {
+        border: none;
+        border-radius: 20px;
+        padding: 20px 30px;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 2px 2px rgba(43, 43, 43, 0.5);
+        margin: 0 auto;
+        cursor: pointer;
+        background: linear-gradient(
+          to bottom right,
+          rgb(235, 223, 223),
+          #e51b23,
+          #e51b23,
+          rgb(235, 27, 27)
+        );
+        &::before {
+          content: "";
+          width: 300px;
+          height: 10px;
+          position: absolute;
+          top: 50%;
+          left: -50px;
+          transform: translateY(-50%);
+          z-index: -1;
+          background-image: linear-gradient(
+            -90deg,
+            #302e31 0%,
+            #b1a112 20%,
+            #b9b70f 70%,
+            #202324 100%
+          );
+
+          border-radius: 100px / 10px;
+          filter: blur(5px);
+        }
+        &:hover {
+          box-shadow: 0 2px 12px rgba(243, 243, 243, 0.5);
+        }
+        &:focus {
+          box-sizing: none;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  .main_contain {
+    .overlay_content {
+      .cow_img {
+        width: 700px;
+      }
+    }
+    .speed-can img {
+      max-width: 500px;
+    }
+
+    .instruction-wrapper .instruction-image,
+    .instruction-wrapper .terms_conditions  {
+      max-width: 900px;
+    }
+  }
+  
+}
+@media only screen and (max-width: 1499px) {
+
+   .main_contain {
+    .instruction-wrapper .instruction-image,
+    .instruction-wrapper .terms_conditions {
+      max-width: 700px;
+    }
+  }
+
+  .main_contain .speed-can img {
+        max-width: 350px;
+    }
+
+    .main_contain .logo-wrapper img {
+      max-width: 150px;
+    }
+
+    .main_contain .home-btn {
+      height: 150px;
+      width: 150px;
+    }
+
+    .main_contain .success-image {
+      width: 400px;
+    }
+
+    .main_contain .profile-picture {
+      width: 300px;
+      height: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 1299px) {
+  .main_contain .speed-can img {
+    max-width: 250px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .main_contain {
+    .overlay_content {
+      .cow_img {
+        width: 500px;
+      }
+      .game_rules {
+        margin-top: 3rem;
+        width: 550px;
+        li {
+          font-size: 14px;
+          font-weight: 600;
+        }
+        .device_position {
+          margin: 1rem 0;
+          img {
+            width: 150px;
+          }
+        }
+      }
+      .roll_screenshot {
+        margin: 1rem 0 2rem 0;
+        img {
+          width: 400px;
+        }
+      }
+      .my_btns_wrapper {
+        .my_btns {
+          font-size: 18px;
+          padding: 15px 20px;
+          &::before {
+            width: 250px;
+            left: -50px;
+          }
+        }
+      }
+    }
+  }
+  .main_contain {
+    .instruction-wrapper .instruction-image {
+      max-width: 600px;
+    }
+    .instruction-wrapper .terms_conditions {
+     max-width: 600px;
+    }
+  }
+
+  .main_contain .home-btn {
+    height: 100px;
+    width: 100px;
+  }
+
+  .main_contain .success-image {
+    width: 300px;
+  }
+
+  .main_contain .profile-picture {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .main_contain {
+    .overlay_content {
+      .cow_img {
+        width: 300px;
+      }
+      .game_rules {
+        margin-top: 2rem;
+        width: 420px;
+        li {
+          &:last-child {
+            margin-top: 1rem;
+          }
+        }
+        .device_position {
+          img {
+            width: 120px;
+          }
+        }
+      }
+      .roll_screenshot {
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+  .main_contain .logo-wrapper img {
+    max-width: 120px;
+  }
+
+  .main_contain {
+    .instruction-wrapper .terms_conditions {
+      max-width: 450px;
+      max-height: none;
+    }
+  }
+
+  .main_contain .success-image {
+    width: 200px;
+  }
+
+  .main_contain .profile-picture {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main_contain {
+    .overlay_content {
+      .cow_img {
+        width: 250px;
+      }
+      .game_rules {
+        li {
+          line-height: 24px;
+          font-weight: 500;
+        }
+        .device_position {
+          margin: 0.5rem 0;
+          img {
+            width: 100px;
+          }
+        }
+      }
+      .roll_screenshot {
+        img {
+          width: 250px;
+        }
+      }
+      .my_btns_wrapper {
+        .my_btns {
+          font-size: 16px;
+          padding: 12px 20px;
+          &::before {
+            width: 200px;
+            left: -40px;
+          }
+        }
+      }
+    }
+  }
+  .main_contain .speed-can img {
+    max-width: 250px;
+  }
+  .main_contain .container-section {
+    padding: 30px 20px 200px;
+  }
+  .main_contain .container-section.remove-bottom-padding {
+    padding: 30px 20px 0;
+  }
+
+  .main_contain .page-wrapper {
+    min-height: auto;
+  }
+  .main_contain .instruction-wrapper h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .main_contain .instruction-wrapper .terms_conditions li {
+    font-size: 16px;
+  }
+
+  .main_contain .instruction-btn {
+    max-width: 300px;
+  }
+  
+  .main_contain .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main_contain {
+    .enverment_bg {
+      .bg_lg {
+        display: none;
+      }
+      .bg_sm {
+        display: block;
+      }
+    }
+    .overlay_content {
+      .cow_img {
+        width: 200px;
+      }
+      .game_rules {
+        width: 320px;
+        li {
+          line-height: 24px;
+        }
+      }
+      .roll_screenshot {
+        margin: 0 0 1rem 0;
+        img {
+          width: 200px;
+        }
+      }
+      .my_btns_wrapper {
+        .my_btns {
+          font-size: 14px;
+
+          &::before {
+            width: 180px;
+            left: -30px;
+          }
+        }
+      }
+    }
+  }
+
+  .main_contain .loading-image {
+    background-image: url("../../assets/images/mob-loading-image.png");
+  }
+
+  .main_contain .instruction-wrapper .instruction-text {
+    font-size: 15px;
+  }
+
+  .main_contain .page-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .main_contain .speed-can img {
+      max-width: 200px;
+    }
+
+  .main_contain .logo-wrapper img {
+    max-width: 100px;
+  }
+
+  .main_contain .instruction-wrapper .instruction-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main_contain .instruction-wrapper .instruction-btn-wrapper {
+    justify-content: center;
+    padding: 0px 20px;
+  }
+
+  .main_contain .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+}
